@@ -12,11 +12,11 @@ html {
   }
 }
 p,
-.p,
-p span {
+.p {
   font-family: var(--base-font-family);
   font-weight: var(--base-font-weight);
   line-height: var(--base-line-height);
+  font-size: 1.5rem;
   color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
 }
@@ -55,17 +55,6 @@ h6,
   @include heading-style(var(--h6-font-size));
 }
 
-.section__content {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 1rem;
-  }
-}
-
 .link {
   color: var(--secondary-color);
   text-decoration: underline;
@@ -93,4 +82,8 @@ h6,
       }
     }
   }
+}
+
+span.line {
+  display: block;
 }

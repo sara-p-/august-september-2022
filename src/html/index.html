@@ -1,60 +1,141 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project Title</title>
+    <title>August/September 2022</title>
+    <meta charset="UTF-8" />
     <script
       src="https://kit.fontawesome.com/d2d9bdc7cf.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <header class="header">
-      <div class="header__wrapper">
-        <div class="header__row">
-          <div class="header__col">
-            <a href="/" class="logo">
-              <img
-                src="<%=require('../../images/placeholder-logo.svg')%>"
-                alt="Logo"
-                class="logo__image"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
     <main>
-      <section class="section">
+      <!-- Hero -->
+      <section class="section--fullscreen background-color--grey1">
         <div class="section__wrapper">
           <div class="section__row">
             <div class="section__col">
-              <h1>Project Title</h1>
-            </div>
-            <div class="section__col">
-              <img
-                class="image--contain"
-                src="<%=require('../../images/folder.svg')%>"
-                alt="folder"
-              />
+              <div class="section__content">
+                <h1>August/September 2022</h1>
+              </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <div class="footer__row">
-          <div class="footer__col">
-            <a href="/" class="logo">
-              <img
-                src="<%=require('../../images/placeholder-logo.svg')%>"
-                alt="Home"
-                class="logo__image"
-              />
-            </a>
+      <!-- Intro (sink illustration) -->
+      <section class="section content--right">
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col">
+              <div class="section__content">
+                <h2>The past few months have been a clusterfuck.</h2>
+                <p>
+                  In April we called a plumber to fix our leaky bathroom sink.
+                </p>
+                <p>
+                  Fast forward a few days to the plumbers cutting a hole in the
+                  kitchen floor to access the bathroom plumbing, only to find
+                  that all of the plumbing was bullshit and falling apart.
+                </p>
+                <p>The shower drain was not connected to anything.</p>
+                <p>
+                  <strong>It was draining into the ground.</strong> &#128579;
+                </p>
+              </div>
+            </div>
+            <div class="section__col background-color--grey2">
+              <figure class="illustration">
+                <img
+                  class="illustration--sink"
+                  src="<%=require('../../images/sink.svg')%>"
+                  alt="Illustration of a bathroom sink"
+                />
+              </figure>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
+      <!-- Toilet Illustration -->
+      <section class="section content--left">
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col">
+              <div class="section__content">
+                <h3>
+                  The plumbers had to redo the plumbing of the entire bathroom.
+                </h3>
+                <p>
+                  When they went to install the toilet, they found that the
+                  entire subfloor had rotted through.
+                </p>
+                <p>
+                  <strong>We would need renovate the entire bathroom.</strong>
+                </p>
+              </div>
+            </div>
+            <div
+              class="section__col flex--justify-start background-color--grey3"
+            >
+              <figure class="illustration">
+                <img
+                  class="illustration--toilet"
+                  src="<%=require('../../images/toilet.svg')%>"
+                  alt="Illustration of a toilet"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Porta Potty Illustration -->
+      <section
+        class="section--fullscreen background-color--grey2 content--right"
+      >
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col flex--justify-start">
+              <div class="section__content--500">
+                <h4 class="h2">
+                  We went 2 months without a toilet while we found a contractor.
+                </h4>
+                <p>
+                  We rented a porta potty and had it put in the alley behind our
+                  house.
+                </p>
+              </div>
+            </div>
+            <div class="section__col">
+              <figure class="illustration">
+                <img
+                  class="illustration--porta-potty"
+                  src="<%=require('../../images/porta-potty.svg')%>"
+                  alt="Illustration of a porta-potty"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section content--left">
+        <div class="section__wrapper">
+          <div class="section__row">
+            <div class="section__col">
+              <div class="section__content">
+                <h5 class="h2">The contractor we found was a godsend.</h5>
+                <p>Trustworthy and experienced.</p>
+                <p>
+                  He let us know that the bathroom reno would spread into the
+                  kitchen. Their tools would take up the rest of the kitchen,
+                  the dining room, and the office.
+                </p>
+                <p>Our house would be unlivable for at least 8 weeks.</p>
+              </div>
+            </div>
+            <div class="section__col"></div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

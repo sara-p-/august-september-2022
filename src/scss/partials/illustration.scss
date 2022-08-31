@@ -1,0 +1,24 @@
+@use '../global/variables.scss' as *;
+@use '../global/mixins.scss' as *;
+
+.illustration {
+  height: 100%;
+  width: 100%;
+  @include flex;
+  padding: var(--spacing-32);
+  &--sink {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  &--toilet {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  &--porta-potty {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}

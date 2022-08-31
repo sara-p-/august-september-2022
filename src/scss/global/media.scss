@@ -1,6 +1,11 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -19,9 +24,27 @@ img {
   }
 }
 
-.logo__image {
-  max-width: 130px;
-  @include tablet-portrait-up {
-    max-width: 200px;
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  @include tablet-landscape-up {
+    display: block;
+    @include absolute;
+  }
+  &--left {
+    @extend .background-image;
+    @include tablet-landscape-up {
+      width: 50%;
+    }
+  }
+  &--right {
+    @extend .background-image;
+    @include tablet-landscape-up {
+      width: 50%;
+      left: auto;
+      right: 0;
+    }
   }
 }

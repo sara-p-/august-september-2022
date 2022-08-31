@@ -16,7 +16,7 @@ html {
 
 html,
 body {
-  height: 100%;
+  height: auto;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -27,34 +27,45 @@ body {
   position: relative;
   width: 100%;
   &--fullscreen {
-    height: calc(100vh - 90.5px);
-    #{$self}__wrapper,
-    #{$self}__row {
+    height: 100vh;
+    .section__wrapper,
+    .section__row,
+    .section__col {
       height: 100%;
+      padding: 0;
     }
   }
   &__wrapper {
     width: 100%;
-    max-width: var(--site-width-xl);
     margin: auto;
-    padding: 0 32px;
+    padding: 0;
   }
   &__row {
     width: 100%;
-    @include flex;
+    display: block;
+    min-height: 70vh;
+    @include tablet-landscape-up {
+      @include flex($align: stretch);
+      gap: 0;
+    }
   }
   &__col {
     flex: 1;
-    padding: 0 var(--spacing-24);
-    &--flex {
-      height: 100%;
-      @include flex;
+    padding: 0;
+  }
+  &__content {
+    padding: var(--spacing-32);
+    width: 100%;
+    max-width: 600px;
+    &--800 {
+      @extend .section__content;
+      max-width: 800px;
+    }
+    &--500 {
+      @extend .section__content;
+      max-width: 500px;
     }
   }
-  // &__content {
-  //   max-width: 500px;
-  //   margin: auto;
-  // }
 }
 
 .header,
@@ -67,6 +78,30 @@ body {
   }
   &__col {
     @extend .section__col;
+  }
+}
+
+// ********************* CONTENT SETTINGS ********************** //
+.content {
+  &--left {
+    @include tablet-landscape-up {
+      .section__col:first-of-type {
+        order: 1;
+      }
+      .section__col:last-of-type {
+        order: 2;
+      }
+    }
+  }
+  &--right {
+    @include tablet-landscape-up {
+      .section__col:first-of-type {
+        order: 2;
+      }
+      .section__col:last-of-type {
+        order: 1;
+      }
+    }
   }
 }
 
@@ -116,20 +151,13 @@ body {
       @include flex($align: flex-start);
     }
   }
+  &--justify-start {
+    @extend .flex;
+    @include tablet-portrait-up {
+      @include flex($justify: flex-start);
+    }
+  }
 }
-
-// ********************* GRID ********************** //
-// .grid {
-//   @for $i from 1 through 5 {
-//     &--#{$grid-space * $i} {
-//       grid-template-columns: repeat(auto-fill, minmax($grid-space * $i, 1fr));
-//       grid-template-rows: repeat(auto-fill, minmax($grid-space * $i, 1fr));
-//     }
-//   }
-//   &--column {
-//     grid-auto-flow: column;
-//   }
-// }
 
 // ********************* LAYOUT MODIFIERS ********************** //
 .padding {
@@ -152,5 +180,33 @@ body {
         }
       }
     }
+  }
+}
+
+// ********************* BACKGROUND MODIFIERS ********************** //
+.background-color {
+  &--isabelline {
+    background: var(--isabelline);
+  }
+  &--pale-silver {
+    background: var(--pale-silver);
+  }
+  &--linen {
+    background: var(--linen);
+  }
+  &--champagne-pink {
+    background: var(--champagne-pink);
+  }
+  &--desert-sand {
+    background: var(--desert-sand);
+  }
+  &--grey1 {
+    background: var(--grey1);
+  }
+  &--grey2 {
+    background: var(--grey2);
+  }
+  &--grey3 {
+    background: var(--grey3);
   }
 }
