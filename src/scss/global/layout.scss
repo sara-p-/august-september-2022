@@ -27,7 +27,9 @@ body {
   position: relative;
   width: 100%;
   &--fullscreen {
-    height: 100vh;
+    @include tablet-landscape-up {
+      height: 100vh;
+    }
     .section__wrapper,
     .section__row,
     .section__col {
@@ -43,20 +45,28 @@ body {
   &__row {
     width: 100%;
     display: block;
-    min-height: 70vh;
     @include tablet-landscape-up {
+      min-height: 70vh;
       @include flex($align: stretch);
       gap: 0;
     }
   }
   &__col {
-    flex: 1;
     padding: 0;
+    flex: 1;
+    &:nth-of-type(2) {
+      @include tablet-landscape-up {
+        background-color: var(--white);
+      }
+    }
   }
   &__content {
-    padding: var(--spacing-32);
     width: 100%;
     max-width: 600px;
+    padding: var(--spacing-24);
+    @include tablet-landscape-up {
+      padding: var(--spacing-64);
+    }
     &--800 {
       @extend .section__content;
       max-width: 800px;
@@ -85,21 +95,21 @@ body {
 .content {
   &--left {
     @include tablet-landscape-up {
-      .section__col:first-of-type {
-        order: 1;
-      }
-      .section__col:last-of-type {
+      .section__col:nth-of-type(1) {
         order: 2;
+      }
+      .section__col:nth-of-type(2) {
+        order: 1;
       }
     }
   }
   &--right {
     @include tablet-landscape-up {
-      .section__col:first-of-type {
-        order: 2;
-      }
-      .section__col:last-of-type {
+      .section__col:nth-of-type(1) {
         order: 1;
+      }
+      .section__col:nth-of-type(2) {
+        order: 2;
       }
     }
   }

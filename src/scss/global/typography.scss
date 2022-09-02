@@ -16,7 +16,7 @@ p,
   font-family: var(--base-font-family);
   font-weight: var(--base-font-weight);
   line-height: var(--base-line-height);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
 }
@@ -27,7 +27,10 @@ p {
 
 h1,
 .h1 {
-  @include heading-style(var(--h1-font-size));
+  @include heading-style(3.5rem);
+  @include tablet-landscape-up {
+    @include heading-style(var(--h1-font-size));
+  }
 }
 
 h2,

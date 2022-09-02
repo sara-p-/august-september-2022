@@ -5,20 +5,37 @@
   height: 100%;
   width: 100%;
   @include flex;
-  padding: var(--spacing-32);
-  &--sink {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+  padding: var(--spacing-48);
+  @include tablet-landscape-up {
+    padding: var(--spacing-64);
   }
-  &--toilet {
-    width: 100%;
-    max-width: 200px;
+  &__image {
     height: auto;
-  }
-  &--porta-potty {
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    max-width: 60%;
+    &--sink {
+      @extend .illustration__image;
+      @include tablet-landscape-up {
+        max-width: 600px;
+      }
+    }
+    &--toilet {
+      @extend .illustration__image;
+      @include tablet-landscape-up {
+        max-width: 400px;
+      }
+    }
+    &--porta-potty {
+      @extend .illustration__image;
+      @include tablet-landscape-up {
+        max-width: 400px;
+      }
+    }
+    &--tape-measure {
+      @extend .illustration__image;
+      @include tablet-landscape-up {
+        max-width: 400px;
+      }
+    }
   }
 }
