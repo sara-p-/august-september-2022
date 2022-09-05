@@ -15,6 +15,7 @@
   --linen: hsla(31, 51%, 92%, 1);
   --champagne-pink: hsla(26, 31%, 84%, 1);
   --desert-sand: hsla(22, 31%, 76%, 1);
+  --melon: #e0afa0;
 
   --grey1: #f4f3ee;
   --grey2: #edede9;
@@ -77,11 +78,11 @@
   --accent-color: var(--orange-red-crayola);
 }
 
-[data-theme='alt'] {
+[data-theme='dark'] {
 }
 
 // Border
-$base-border: 3px solid var(--secondary-color);
+$base-border: 3px solid var(--grey3);
 
 // Layout Modifier Sizes (see layout.scss)
 $sizes: 8px, 16px, 24px, 32px, 48px, 64px, 120px, 160px, 200px;

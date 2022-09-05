@@ -16,13 +16,13 @@
     &--sink {
       @extend .illustration__image;
       @include tablet-landscape-up {
-        max-width: 600px;
+        max-width: 500px;
       }
     }
     &--toilet {
       @extend .illustration__image;
       @include tablet-landscape-up {
-        max-width: 400px;
+        max-width: 350px;
       }
     }
     &--porta-potty {
@@ -35,6 +35,12 @@
       @extend .illustration__image;
       @include tablet-landscape-up {
         max-width: 400px;
+      }
+    }
+    &--airbnb {
+      @extend .illustration__image;
+      @include tablet-landscape-up {
+        max-width: 500px;
       }
     }
   }

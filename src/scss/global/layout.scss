@@ -36,6 +36,31 @@ body {
       height: 100%;
       padding: 0;
     }
+    .section__col:nth-of-type(2) {
+      @include tablet-landscape-up {
+        background-color: inherit;
+      }
+    }
+  }
+  &--banner {
+    @extend .section;
+    .section__row {
+      // padding: var(--spacing-64) 0;
+      min-height: auto;
+    }
+    .section__content {
+      max-width: 100%;
+    }
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    p {
+      margin-bottom: 0;
+      letter-spacing: normal;
+    }
   }
   &__wrapper {
     width: 100%;
@@ -209,6 +234,12 @@ body {
   }
   &--desert-sand {
     background: var(--desert-sand);
+  }
+  &--black {
+    background: var(--black);
+  }
+  &--melon {
+    background: var(--melon);
   }
   &--grey1 {
     background: var(--grey1);
